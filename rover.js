@@ -37,13 +37,13 @@ class Rover {
 
 
    createMsgCmdArray(cmds) {  //// Create a new array to store commands with status.
-      let messageCommands = cmds;
+  
       let allCommands = [];
 
-      while (messageCommands.length > 0) {
-         let msgCmdsResult = this.createResultObj(messageCommands[0]);
+      while (cmds.length > 0) {
+         let msgCmdsResult = this.createResultObj(cmds[0]);
          allCommands.push(msgCmdsResult);
-         messageCommands.shift();
+         cmds.shift();
       }
 
       return allCommands;
